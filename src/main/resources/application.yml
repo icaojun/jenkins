@@ -1,0 +1,28 @@
+server:
+  port: 8099
+spring:
+  datasource:
+    name: jenkins
+    url: jdbc:mysql://localhost:3306/jenkinds?useSSL=false
+    username: root
+    password: root
+#    type: com.alibaba.druid.pool.DruidDataSource # 使用druid 数据源
+    driver-class-name: com.mysql.jdbc.Driver
+#    dbcp2:
+#      min-idle: 1
+#      max-idle: 2
+#      initial-size: 1
+#      time-between-eviction-runs-millis: 3000
+#      min-evictable-idle-time-millis: 300000
+#      validation-query: SELECT "ZTM" FROM DUAL
+#      test-while-idle: true
+#      test-on-borrow: false
+#      test-on-return: false
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.cj.jenkinds.*
+
+logging:
+    level:
+      com.cj.jenkins: DEBUG
